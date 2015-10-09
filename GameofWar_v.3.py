@@ -1,14 +1,7 @@
-#!/usr/bin/env python
-# encoding: utf-8
-"""
-GameOfWar.py
-
-Created by Neumann, Daniel on 2015-10-06.
-Copyright (c) 2015 __MyCompanyName__. All rights reserved.
-
-This is the shell copy. Fill this out to get it to work
-
-"""
+#Jacob Wright
+#Week 5 Assignment
+#GameofWar_v.3
+#Collaborated with Daniel McMurry, Marissa Gross, Evan Sauers
 
 import random	
 
@@ -47,7 +40,7 @@ def main():
 	# End of game
 	
 	print("There were ", gameCounter, " rounds played")
-	print("Player A has " + str(len(PlayerAHand)) + "cards, Player B has " + str(len(PlayerBHand)))
+	print("Player A has " + str(len(PlayerAHand)) + " cards, Player B has " + str(len(PlayerBHand)))
 	
 def playRound(PlayerA, PlayerB):
 	Acard = PlayerA.pop()
@@ -74,8 +67,34 @@ def playRound(PlayerA, PlayerB):
 
 
 def WAR(PlayerA, PlayerB):
-	# See the README.md file for instructions on coding 
-	# This module.
+	print("War")
+	
+	Astack = []
+	Bstack = []
+	
+	if len(PlayerA) > 4 and len(PlayerB) > 4:
+		
+	#pull 4 cards out
+	  for x in range(4):
+	    Astack.append(PlayerA.pop())
+	    Bstack.append(PlayerB.pop())
+	    
+	  if getRank(Astack[3]) > getRank(Bstack[3]):
+	  	
+	  #a winsall
+	  
+	    PlayerA = Astack = Bstack = PlayerA
+	    
+	  elif getRank(Bstack[3]) > getRank(Astack[3]):
+	  #b wins all
+	  
+	    PlayerB= Bstack = Astack = PlayerB
+	    
+	  else:
+	  	  #in case of another War, everyone lose
+	  	  
+	  	  pass
+
 
 	return PlayerA, PlayerB
 

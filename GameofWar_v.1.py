@@ -1,14 +1,7 @@
-#!/usr/bin/env python
-# encoding: utf-8
-"""
-GameOfWar.py
-
-Created by Neumann, Daniel on 2015-10-06.
-Copyright (c) 2015 __MyCompanyName__. All rights reserved.
-
-This is the shell copy. Fill this out to get it to work
-
-"""
+#Jacob Wright
+#Week 5 Assignment
+#GameofWar_v.1
+#Collaborated with Daniel McMurry, Marissa Gross, Evan Sauers
 
 import random	
 
@@ -47,7 +40,7 @@ def main():
 	# End of game
 	
 	print("There were ", gameCounter, " rounds played")
-	print("Player A has " + str(len(PlayerAHand)) + "cards, Player B has " + str(len(PlayerBHand)))
+	print("Player A has " + str(len(PlayerAHand)) + " cards, Player B has " + str(len(PlayerBHand)))
 	
 def playRound(PlayerA, PlayerB):
 	Acard = PlayerA.pop()
